@@ -1,0 +1,35 @@
+{
+  "name": "laypanel",
+  "version": "0.1.0",
+  "description": "Flexbox React Components to create tiled scrolling window views",
+  "main": "index.js",
+  "author": "Ben Junya<bjunya@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "tsc": "tsc",
+    "build": "webpack",
+    "dev": "webpack --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@babel/runtime": "^7.6.0",
+    "@emotion/babel-preset-css-prop": "^10.0.17",
+    "@emotion/core": "^10.0.17",
+    "@types/react": "^16.9.2",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-emotion": "^10.0.17",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.1.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "react": "^16.9.0"
+  }
+}
