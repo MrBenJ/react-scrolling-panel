@@ -1,5 +1,10 @@
-import LayPanelContainer from './components/LayPanelContainer';
-import Panel from './components/Panel';
+import Container, { ContainerProps } from './components/Container';
+import Panel, { PanelProps } from './components/Panel';
 
-export default LayPanelContainer;
-export { Panel };
+export default Container;
+export {
+  Container,
+  ContainerProps,
+  Panel,
+  PanelProps
+};

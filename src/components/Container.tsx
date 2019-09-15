@@ -2,17 +2,16 @@
 import { ReactNode } from 'react';
 import { css, jsx } from '@emotion/core';
 
-type ContainerProps = {
-  className?: string,
+export type ContainerProps = {
   children: ReactNode,
   direction: 'horizontal' | 'vertical'
 };
 
-function LayPanelContainer(props: ContainerProps) {
+function Container(props: ContainerProps) {
   const {
     children,
-    className = '',
-    direction = 'vertical'
+    direction = 'vertical',
+    ...rest
   } = props;
 
   const parentCss = css`
@@ -20,6 +19,7 @@ function LayPanelContainer(props: ContainerProps) {
     width: 100%;
     flex: 0 1 auto;
     overflow: hidden;
+    max-height:100%;
   `;
 
   const baseCss = css`
@@ -30,7 +30,7 @@ function LayPanelContainer(props: ContainerProps) {
 
   return (
       <div
-        className={`${className}`.trim()}
+        {...rest}
         css={parentCss}>
         <div css={baseCss}>
           {children}
@@ -39,4 +39,4 @@ function LayPanelContainer(props: ContainerProps) {
   );
 }
 
-export default LayPanelContainer;
+export default Container;

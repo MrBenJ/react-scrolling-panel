@@ -1,24 +1,26 @@
 /** @jsx jsx */
 import { ReactNode } from 'react';
-import { jsx, css } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 
-type PanelProps = {
+export type PanelProps = {
   size: number,
-  className?: string,
   children: ReactNode
 };
 
 export default function Panel(props: PanelProps) {
-  const { size = 0, className = '', children } = props;
+  const {
+    size = 1,
+    children,
+    ...rest
+  } = props;
+
   const style = css`
     flex: ${size};
     overflow: auto;
-    min-height: 100%;
-    max-height: 100%;
   `;
 
   return (
-    <div className={className} css={style}>
+    <div {...rest} css={style}>
       {children}
     </div>
   );

@@ -8,8 +8,7 @@ module.exports = {
     publicPath: '/',
     libraryTarget: 'commonjs2'
   },
-  mode: process.env.NODE_ENV || 'development',
-  devtool: 'source-map',
+  mode: process.env.NODE_ENV || 'production',
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
@@ -26,11 +25,6 @@ module.exports = {
             loader: 'ts-loader'
           }
         ]
-      },
-      {
-        enforce: 'pre',
-        test: /\.js$/,
-        loader: 'source-map-loader'
       }
     ]
   },
