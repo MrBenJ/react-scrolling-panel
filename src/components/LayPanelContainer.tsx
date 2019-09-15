@@ -1,37 +1,42 @@
-import React, { ReactNode } from 'react';
-import { css } from '@emotion/core';
+/** @jsx jsx */
+import { ReactNode } from 'react';
+import { css, jsx } from '@emotion/core';
 
-type LayPanelContextProps = {
-  basePrefix: string,
+type ContainerProps = {
   className?: string,
-  children: ReactNode
+  children: ReactNode,
+  direction: 'horizontal' | 'vertical'
 };
 
-export default function LayPanelContainer(props: LayPanelContextProps) {
-  const { basePrefix, children, className } = props;
-  const baseCss = css`
-    .${basePrefix}-root {
+function LayPanelContainer(props: ContainerProps) {
+  const {
+    children,
+    className = '',
+    direction = 'vertical'
+  } = props;
 
-    .${basePrefix}-flex {
-        display: flex;
-      }
-
-      .${basePrefix}-flex-column {
-        display: flex;
-        flex-direction: column;
-      }
-      /* Creates flex-# class where # is value of "flex" up to a max of 12 */
-      ${Array(12).map((_,i) =>
-        `.${basePrefix}-flex${i} { flex: ${i};}`
-      ).join(' ')}
-    }
+  const parentCss = css`
+    display: flex;
+    width: 100%;
+    flex: 0 1 auto;
+    overflow: hidden;
   `;
+
+  const baseCss = css`
+    display: flex;
+    flex-direction: ${direction === 'vertical' ? 'column' : 'row'};
+    flex: 1;
+  `;
+
   return (
-      <div className={`${className} ${basePrefix}-root`}>
-      {children}
+      <div
+        className={`${className}`.trim()}
+        css={parentCss}>
+        <div css={baseCss}>
+          {children}
+        </div>
       </div>
   );
 }
-LayPanelContainer.defaultProps = {
-  basePrefix: '__laypanel'
-};
+
+export default LayPanelContainer;

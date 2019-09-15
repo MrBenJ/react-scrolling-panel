@@ -3,11 +3,12 @@ const path = require('path');
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.ts'),
   output: {
-    path: path.resolve(__dirname, '.'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
-    publicPath: '/'
+    publicPath: '/',
+    libraryTarget: 'commonjs2'
   },
-  mode: process.env.NODE_ENV || 'production',
+  mode: process.env.NODE_ENV || 'development',
   devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
@@ -34,6 +35,6 @@ module.exports = {
     ]
   },
   externals: {
-    react: 'React'
+    'react': 'commonjs react'
   }
 };
