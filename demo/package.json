@@ -15,7 +15,9 @@
   "author": "Ben Junya <bjunya@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@emotion/core": "^10.0.17",
     "react": "^16.9.0",
+    "react-blockpanel": "^1.0.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.13"
   },
@@ -23,6 +25,7 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
+    "@emotion/babel-preset-css-prop": "^10.0.17",
     "@hot-loader/react-dom": "^16.9.0",
     "babel-loader": "^8.0.6",
     "webpack": "^4.40.2",
