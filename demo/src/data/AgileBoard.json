@@ -1,0 +1,117 @@
+{
+  "todo": [
+    {
+      "title": "Set up webpack",
+      "description": "Get webpack with hot reloading on project X",
+      "priority": 1
+    },
+    {
+      "title": "Publish 1.18.3",
+      "description": "Publish a brand new npm package with all the new toys",
+      "priority": 3
+    },
+    {
+      "title": "Pet Dogs",
+      "description": "Find a random dog. Then go pet it",
+      "priority": 0
+    },
+    {
+      "title": "Argue with a Redditor",
+      "description": "Pick a random fight on the internet.",
+      "priority": 2
+    },
+    {
+      "title": "Get Groceries",
+      "description": "There is no food in the office and I have not eaten in 3 days because I keep petting dogs"
+    }
+  ],
+  "in_progress": [
+    {
+      "title": "Create Scrolling Sidebar",
+      "description": "Create a scrolling sidebar on the left side",
+      "priority": 2
+    },
+    {
+      "title": "Write documentation for feature 16",
+      "description": "Give solid instruction on how to use react-blockpanel",
+      "priority": 0
+    },
+    {
+      "title": "Build demo page",
+      "description": "Build a hilarious demo page where people might find some funny tidbits",
+      "priority": 1
+    },
+    {
+      "title": "Pet Cat",
+      "description": "Find a random cat. Then go pet it",
+      "priority": 0
+    },
+    {
+      "title": "Pet Hampster",
+      "description": "Find a hampster. Pet said hampster",
+      "priority": 0
+    },
+    {
+      "title": "Write Jokes",
+      "description": "Make sure the jokes are really funny",
+      "priority": 2
+    },
+    {
+      "title": "Explore CRM Options",
+      "description": "Look at various CRM options for the business",
+      "priority": 1
+    }
+  ],
+  "qa_todo": [
+    {
+      "title": "Research Chaos Testing",
+      "description": "Hire some gremlins to overtake our site. Then stop them",
+      "priority": 2
+    },
+    {
+      "title": "Fix hover flicker",
+      "description": "There is hover flicker on the dropdown menu if you hold the curor on a particular pixel",
+      "priority": 1
+    },
+    {
+      "title": "Saved User Cannot Login",
+      "description": "User cannot log into the system if saved on a different machine",
+      "priority": 0
+    },
+    {
+      "title": "Amex Cards Declined with Gift Card",
+      "description": "User cannot purchase with gift card and amex card combined",
+      "priority": 0
+    },
+    {
+      "title": "e2e Tests Failing",
+      "description": "Happens every day. Please test manually",
+      "priority": 1
+    },
+    {
+      "title": "Man walks into bar",
+      "description": "He didn't see the bar and now he is hurt. Does anyone know first aid?",
+      "priority": 1
+    },
+    {
+      "title": "Make stronger coffee",
+      "description": "It's weak. Please make strong",
+      "priority": 2
+    }
+  ],
+  "qa_in_progress": [
+    {
+      "title": "Look for Green Tea",
+      "description": "It's an angular thing, right?",
+      "priority": 1
+    },
+    {
+      "title": "Check User Stories",
+      "description": "Lol this is in progress in QA",
+      "priority": 2
+    }
+  ],
+  "done": [
+
+  ]
+}

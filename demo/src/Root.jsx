@@ -3,7 +3,9 @@ import React from 'react';
 import { Container, Panel } from 'react-blockpanel';
 import { css } from '@emotion/core';
 
+import AgileBoard from './data/AgileBoard.json';
 import FullscreenLayout from './component/layout/FullscreenLayout';
+import SwimlaneCard from './component/SwimlaneCard';
 
 function Root() {
   const style = css`
@@ -19,23 +21,25 @@ function Root() {
     .section-example-swimlane {
       background-color: lightblue;
 
-      .sidebar {
+      .swimlane-sidebar {
         padding: 1.8rem;
+        max-width: 15rem;
       }
 
       .swimlane {
-        padding: .9rem;
+        padding: 0 1rem;
       }
 
       .swimlane-title {
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+        background-color: lightblue;
         font-size: 1rem;
         text-align: center;
+        position: sticky;
+        top: 0;
       }
-
-      .card {
-
-      }
-
 
     }
   `;
@@ -45,39 +49,54 @@ function Root() {
         <div className="intro-content">
           <h1>react-blockpanel</h1>
           <p>Create scrollable window-like experiences with just 2 lightweight components!</p>
+          <div>A Quick demonstration</div>
         </div>
       </FullscreenLayout>
       <FullscreenLayout className="section-example-swimlane">
         <Container direction="horizontal">
-          <Panel size={2}>
-            <div className="sidebar">
+          <Panel size={2} className="swimlane-sidebar">
+            <div className="swimlane-sidebar-content">
               Sidebar
             </div>
           </Panel>
           <Panel size={1}>
             <div className="swimlane">
               <p className="swimlane-title">Todo</p>
+              {AgileBoard.todo.map( (props, idx) =>
+                <SwimlaneCard {...props} key={idx}/>
+              )}
             </div>
           </Panel>
           <Panel size={1}>
             <div className="swimlane">
               <p className="swimlane-title">In Progress</p>
+              {AgileBoard.in_progress.map((props, idx) =>
+                <SwimlaneCard {...props} key={idx} />
+              )}
             </div>
           </Panel>
           <Panel size={1}>
-
             <div className="swimlane">
               <p className="swimlane-title">Qa Todo</p>
+              {AgileBoard.qa_todo.map((props, idx) =>
+                <SwimlaneCard {...props} key={idx} />
+              )}
             </div>
           </Panel>
           <Panel size={1}>
             <div className="swimlane">
               <p className="swimlane-title">Qa In Progress</p>
+              {AgileBoard.qa_in_progress.map((props, idx) =>
+                <SwimlaneCard {...props} key={idx} />
+              )}
             </div>
           </Panel>
           <Panel size={1}>
             <div className="swimlane">
               <p className="swimlane-title">Done</p>
+              {AgileBoard.done.map((props, idx) =>
+                <SwimlaneCard {...props} key={idx} />
+              )}
             </div>
           </Panel>
         </Container>
