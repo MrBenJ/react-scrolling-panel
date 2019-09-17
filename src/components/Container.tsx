@@ -17,6 +17,7 @@ function Container(props: ContainerProps) {
   const parentCss = css`
     display: flex;
     width: 100%;
+    height: 100%;
     flex: 0 1 auto;
     overflow: hidden;
     max-height:100%;

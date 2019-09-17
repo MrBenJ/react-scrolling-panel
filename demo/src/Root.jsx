@@ -11,6 +11,9 @@ function Root() {
   const style = css`
     background-color: smokewhite;
 
+    .flex-centered {}
+
+
     .section-intro {
       display: flex;
       align-items: center;
@@ -39,9 +42,12 @@ function Root() {
         text-align: center;
         position: sticky;
         top: 0;
+        box-shadow: 0.1rem 0.1rem 0.9rem 0rem rgba(0,0,0,.5);
       }
 
     }
+
+
   `;
   return (
     <div css={style}>
@@ -98,6 +104,32 @@ function Root() {
                 <SwimlaneCard {...props} key={idx} />
               )}
             </div>
+          </Panel>
+        </Container>
+      </FullscreenLayout>
+      <FullscreenLayout className="section-split">
+        <Container direction="horizontal">
+          <Panel size={1}>
+            <Container direction="vertical">
+              <Panel size={1}>
+                <div className="section-split-explanation">
+                  Panels can nest containers and other panels that expand to the full height and width of its parent
+                </div>
+              </Panel>
+              <Panel size={4}>
+                Insert code here
+              </Panel>
+            </Container>
+          </Panel>
+          <Panel size={1}>
+            <Container direction="vertical">
+              <Panel size={1}>
+                Hello!
+              </Panel>
+              <Panel size={1}>
+                Hi there
+              </Panel>
+            </Container>
           </Panel>
         </Container>
       </FullscreenLayout>

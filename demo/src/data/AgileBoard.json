@@ -175,7 +175,7 @@
     },
     {
       "title": "Add Joke Card",
-      "description": "Lol its done",
+      "description": "Only one joke card allowed per board. Two jokes is too many. Three is right out.",
       "priority": 1
     }
   ]

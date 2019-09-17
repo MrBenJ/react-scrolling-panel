@@ -10,7 +10,8 @@ module.exports = {
   devServer: {
     hot: true,
     port: 9000,
-    contentBase: './'
+    contentBase: './',
+    disableHostCheck: true
   },
   mode: process.env.NODE_ENV || 'development',
   resolve: {
