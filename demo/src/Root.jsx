@@ -2,10 +2,34 @@ import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import { Container, Panel } from 'react-blockpanel';
 import { css } from '@emotion/core';
+import {
+  LiveProvider,
+  LiveEditor,
+  // LiveError,
+  LivePreview
+} from 'react-live';
 
 import AgileBoard from './data/AgileBoard.json';
 import FullscreenLayout from './component/layout/FullscreenLayout';
 import SwimlaneCard from './component/SwimlaneCard';
+
+const EXAMPLE_CODE =
+`
+<Container direction="vertical">
+  <Panel
+    className="section-split-window"
+    size={1}
+  >
+    Hello!
+  </Panel>
+  <Panel
+    className="section-split-window"
+    size={1}
+  >
+    Hi there
+  </Panel>
+</Container>
+`
 
 function Root() {
   const style = css`
@@ -45,6 +69,15 @@ function Root() {
         box-shadow: 0.1rem 0.1rem 0.9rem 0rem rgba(0,0,0,.5);
       }
 
+    }
+
+    .section-split {
+      background-color: #011627;
+      color: whitesmoke;
+    }
+
+    .section-split-window {
+      padding: 1rem;
     }
 
 
@@ -108,30 +141,37 @@ function Root() {
         </Container>
       </FullscreenLayout>
       <FullscreenLayout className="section-split">
-        <Container direction="horizontal">
-          <Panel size={1}>
-            <Container direction="vertical">
-              <Panel size={1}>
-                <div className="section-split-explanation">
-                  Panels can nest containers and other panels that expand to the full height and width of its parent
-                </div>
-              </Panel>
-              <Panel size={4}>
-                Insert code here
-              </Panel>
-            </Container>
-          </Panel>
-          <Panel size={1}>
-            <Container direction="vertical">
-              <Panel size={1}>
-                Hello!
-              </Panel>
-              <Panel size={1}>
-                Hi there
-              </Panel>
-            </Container>
-          </Panel>
-        </Container>
+        <LiveProvider code={EXAMPLE_CODE} scope={{ Panel, Container }}>
+          <Container direction="horizontal">
+            <Panel size={1}>
+              <Container direction="vertical">
+                <Panel
+                  className="section-split-window"
+                  size={1}
+                >
+                  <div className="section-split-explanation">
+                    Seamlessly build desktop app-like user experiences by nesting elements together
+                  </div>
+                </Panel>
+                <Panel
+                  className="section-split-window"
+                  size={4}
+                >
+                  <LiveEditor />
+                </Panel>
+              </Container>
+            </Panel>
+            <Panel
+              className="section-split-window"
+              size={1}
+            >
+            <LivePreview style={{ height: "100%" }} />
+              { /*
+
+              */}
+            </Panel>
+          </Container>
+        </LiveProvider>
       </FullscreenLayout>
     </div>
   );
