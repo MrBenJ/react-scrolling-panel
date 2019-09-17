@@ -56,7 +56,7 @@ function Root() {
         <Container direction="horizontal">
           <Panel size={2} className="swimlane-sidebar">
             <div className="swimlane-sidebar-content">
-              Sidebar
+              With react-blockpanel, you can quickly create flexbox-based responsive layouts with individual panels that scroll, all based on the content inside.
             </div>
           </Panel>
           <Panel size={1}>

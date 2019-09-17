@@ -22,7 +22,8 @@
     },
     {
       "title": "Get Groceries",
-      "description": "There is no food in the office and I have not eaten in 3 days because I keep petting dogs"
+      "description": "There is no food in the office and I have not eaten in 3 days because I keep petting dogs",
+      "priority": 1
     }
   ],
   "in_progress": [
@@ -32,7 +33,7 @@
       "priority": 2
     },
     {
-      "title": "Write documentation for feature 16",
+      "title": "Write docs for feature 16",
       "description": "Give solid instruction on how to use react-blockpanel",
       "priority": 0
     },
