@@ -110,9 +110,73 @@
       "title": "Check User Stories",
       "description": "Lol this is in progress in QA",
       "priority": 2
+    },
+    {
+      "title": "Measure Joke Quality",
+      "description": "Are the jokes funny? If not... You know what to do...",
+      "priority": 2
+    },
+    {
+      "title": "Help person cross street",
+      "description": "Help someone cross the street. Age doesn't matter. Make this as weird as possible",
+      "priority": 0
+    },
+    {
+      "title": "Think about life",
+      "description": "Why am I writing jokes that maybe 4 people will see in an open source repo's demonstration page?",
+      "priority": 3
+    },
+    {
+      "title": "Think",
+      "description": "It's hard. I can't even",
+      "priority": 1
+    },
+    {
+      "title": "Play Video Games",
+      "description": "The new Fire Emblem game is pretty sweet.",
+      "priority": 2
+    },
+    {
+      "title": "Logout Modal Error",
+      "description": "Logout modal is not rendering due to a front end error",
+      "priority": 2
+    },
+    {
+      "title": "API return slug",
+      "description": "Make sure PostgreSQL returns a slug from the /:something/object endpoint to ensure consistency between endpoints",
+      "priority": 0
+    },
+    {
+      "title": "Make Coffee",
+      "description": "Mmmm.... coffee",
+      "priority": 0
     }
   ],
   "done": [
-
+    {
+      "title": "Call Parents",
+      "description": "Say hello, I love you mom and dad!",
+      "priority": 1
+    },
+    {
+      "title": "Enjoy the Beach",
+      "description": "Go to beach. Look at water. Smile",
+      "priority": 0
+    },
+    {
+      "title": "Fix JWT auth",
+      "description": "JWT isn't properly working in staging environment",
+      "priority": 0
+    },
+    {
+      "title": "Create SQL Fixtures",
+      "description": "The current testing environment doesn't have the proper fixtures to run contract testing.",
+      "priority": 2
+    },
+    {
+      "title": "Add Joke Card",
+      "description": "Lol its done",
+      "priority": 1
+    }
   ]
 }
