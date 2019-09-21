@@ -1,0 +1,80 @@
+[
+  {
+    "name": "index.html"
+  },
+  {
+    "name": "style.css"
+  },
+  {
+    "name": "bundle.js"
+  },
+  {
+    "name": "logo.svg"
+  },
+  {
+    "name": "spritesheet.svg"
+  },
+  {
+    "name": "vendor.bundle.js"
+  },
+  {
+    "name": "webpack.config.js"
+  },
+  {
+    "name": ".babelrc"
+  },
+  {
+    "name": ".env"
+  },
+  {
+    "name": "README.md"
+  },
+  {
+    "name": "CONTRIBUTING.md"
+  },
+  {
+    "name": "LICENSE"
+  },
+  {
+    "name": "Procfile"
+  },
+  {
+    "name": ".buildkite"
+  },
+  {
+    "name": "Dockerfile"
+  },
+  {
+    "name": "package.json"
+  },
+  {
+    "name": "docker-compose.yml"
+  },
+  {
+    "name": "package-lock.json"
+  },
+  {
+    "name": ".gitignore"
+  },
+  {
+    "name": ".npmignore"
+  },
+  {
+    "name": "spacecat.svg"
+  },
+  {
+    "name": "covfefe.js"
+  },
+  {
+    "name": "probably_protein.js"
+  },
+  {
+    "name": "I_cant_think_of.js"
+  },
+  {
+    "name": "more_root_level.js"
+  },
+  {
+    "name": "filenames.js"
+  }
+]
