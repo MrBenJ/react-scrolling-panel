@@ -5,28 +5,47 @@ import { css } from '@emotion/core';
 import {
   LiveProvider,
   LiveEditor,
-  // LiveError,
+  LiveError,
   LivePreview
 } from 'react-live';
-
-import AgileBoard from './data/AgileBoard.json';
 import FullscreenLayout from './component/layout/FullscreenLayout';
 import SwimlaneCard from './component/SwimlaneCard';
+import AwesomeVideo from './component/AwesomeVideo';
+import VideoComment from './component/VideoComment';
+import SuggestedVideo from './component/SuggestedVideo';
 
+import AgileBoard from './data/AgileBoard.json';
+import VideoComments from './data/VideoComments.json';
+import VideoSuggestions from './data/VideoSuggestions.json';
+console.log(VideoSuggestions);
 const EXAMPLE_CODE =
 `
 <Container direction="vertical">
-  <Panel
-    className="section-split-window"
-    size={1}
-  >
-    Hello!
+  <Panel size={1}>
+    <AwesomeVideo />
   </Panel>
-  <Panel
-    className="section-split-window"
-    size={1}
-  >
-    Hi there
+  <Panel size={1}>
+    { /* Nested container splits the bottom panel here! */}
+    <Container direction="horizontal">
+      <Panel size={2}>
+        { VideoComments.map( data => (
+          <VideoComment
+            key={data.comment}
+            user={data.user}
+            comment={data.comment} />
+          )
+        )}
+      </Panel>
+      <Panel size={3}>
+        { VideoSuggestions.map( data => (
+          <SuggestedVideo
+            key={data.title}
+            title={data.title}
+            img={data.img} />
+          )
+        )}
+      </Panel>
+    </Container>
   </Panel>
 </Container>
 `
@@ -35,8 +54,11 @@ function Root() {
   const style = css`
     background-color: smokewhite;
 
-    .flex-centered {}
+    textarea:focus {
+      outline: none;
+    }
 
+    .flex-centered {}
 
     .section-intro {
       display: flex;
@@ -76,8 +98,12 @@ function Root() {
       color: whitesmoke;
     }
 
-    .section-split-window {
+    .padded-panel {
       padding: 1rem;
+    }
+
+    .section-split-window {
+
     }
 
 
@@ -141,23 +167,30 @@ function Root() {
         </Container>
       </FullscreenLayout>
       <FullscreenLayout className="section-split">
-        <LiveProvider code={EXAMPLE_CODE} scope={{ Panel, Container }}>
+        <LiveProvider code={EXAMPLE_CODE} scope={{
+          Panel,
+          Container,
+          AwesomeVideo,
+          VideoComment,
+          VideoComments,
+          SuggestedVideo,
+          VideoSuggestions }}>
           <Container direction="horizontal">
             <Panel size={1}>
               <Container direction="vertical">
                 <Panel
-                  className="section-split-window"
+                  className="padded-panel"
                   size={1}
                 >
                   <div className="section-split-explanation">
-                    Seamlessly build desktop app-like user experiences by nesting elements together
+                    Seamlessly build windowed panels semantically. Nest {`<Container>`}'s inside a {`<Panel>`} to build simple, but complex looking user experiences.
                   </div>
                 </Panel>
-                <Panel
-                  className="section-split-window"
-                  size={4}
-                >
+                <Panel size={4}>
                   <LiveEditor />
+                </Panel>
+                <Panel size={2}>
+                  <LiveError />
                 </Panel>
               </Container>
             </Panel>
@@ -166,9 +199,6 @@ function Root() {
               size={1}
             >
             <LivePreview style={{ height: "100%" }} />
-              { /*
-
-              */}
             </Panel>
           </Container>
         </LiveProvider>
