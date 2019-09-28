@@ -19,10 +19,10 @@
     "@maji/react-prism": "^1.0.1",
     "prismjs": "^1.17.1",
     "react": "^16.9.0",
-    "react-blockpanel": "^1.0.1",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.13",
-    "react-live": "^2.2.0"
+    "react-live": "^2.2.0",
+    "react-scrolling-panel": "^1.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

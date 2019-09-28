@@ -1,6 +1,6 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
-import { Container, Panel } from 'react-blockpanel';
+import { Container, Panel } from 'react-scrolling-panel';
 import { css } from '@emotion/core';
 import {
   LiveProvider,
