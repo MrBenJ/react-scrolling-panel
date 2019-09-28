@@ -1,16 +1,16 @@
-# react-scrollpanel
+# react-scrolling-panel
 ### A quick and easy way to creating scrolling panels in React
 
 Many popular web applications take the full height of the window and have "tiles" or "panels" that scroll independently of one another. Sites like YouTube, Twitter, Google Analytics, Robinhood, etc. all use independent scrolling content, whether it's just a sidebar on the left hand side, or a bunch of small windows showing stock trading activity, these views can be indimidating to write with one's own CSS.
 
-I created `react-scrollpanel` to streamline the experience of making multiple independently scrolling elements that take up the full width and height of the parent, so I don't have to hunt for which one div needs `overflow: auto;` or `overflow: hidden;` anymore. The layout of the page is built semantically, composed with just 2 React Components: `<Container>` and `<Panel>`.
+I created `react-scrolling-panel` to streamline the experience of making multiple independently scrolling elements that take up the full width and height of the parent, so I don't have to hunt for which one div needs `overflow: auto;` or `overflow: hidden;` anymore. The layout of the page is built semantically, composed with just 2 React Components: `<Container>` and `<Panel>`.
 
 ## Quick Demo
 Insert image here
 
 ```js
 import React from 'react';
-import { Container, Panel } from 'react-scrollpanel';
+import { Container, Panel } from 'react-scrolling-panel';
 
 import SideBarItem from './components/SideBarItem';
 import Post from './components/Post';
@@ -46,12 +46,12 @@ Insert robust demos and clones of popular site layouts here
 ## Installation
 Install just like any other package:
 ```bash
-$ npm install react-scrollpanel
+$ npm install react-scrolling-panel
 ```
 
 Or use yarn!
 ```bash
-$ yarn add react-scrollpanel
+$ yarn add react-scrolling-panel
 ```
 
 ## Usage

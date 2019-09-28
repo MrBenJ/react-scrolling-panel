@@ -1,7 +1,7 @@
 {
-  "name": "react-scrollpanel-demo-site",
+  "name": "react-scrolling-panel-demo-site",
   "version": "1.0.0",
-  "description": "Demonstration site for react-scrollpanel",
+  "description": "Demonstration site for react-scrolling-panel",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
