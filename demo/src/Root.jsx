@@ -81,16 +81,16 @@ const SECOND_EXAMPLE_CODE =
     <Panel className="padded-panel" size={1}>
       Install with the following command:
       <CodeSnippet canCopy={true}>
-        npm install react-blockpanel --save
+        npm install react-scrollpanel --save
       </CodeSnippet>
       <br/>
       Or with yarn:
       <CodeSnippet canCopy={true}>
-        yarn add react-blockpanel
+        yarn add react-scrollpanel
       </CodeSnippet>
       <p>
         View source on
-        <a target="_blank" rel="noreferrer nofollow" href="https://www.github.com/MrBenJ/react-blockpanel">
+        <a target="_blank" rel="noreferrer nofollow" href="https://www.github.com/MrBenJ/react-scrollpanel">
           Github <i className="fa fa-github" />
         </a>
       </p>
@@ -189,7 +189,7 @@ function Root() {
     <div css={style}>
       <FullscreenLayout className="section-intro">
         <div className="intro-content">
-          <h1>react-blockpanel</h1>
+          <h1>react-scrollpanel</h1>
           <p>Create scrollable window-like experiences with just 2 lightweight components!</p>
           <div>A Quick demonstration</div>
         </div>
@@ -198,7 +198,7 @@ function Root() {
         <Container direction="horizontal">
           <Panel size={2} className="swimlane-sidebar">
             <div className="swimlane-sidebar-content">
-              With react-blockpanel, you can quickly create flexbox-based responsive layouts with individual panels that scroll based on the length of the content.
+              With react-scrollpanel, you can quickly create flexbox-based responsive layouts with individual panels that scroll based on the length of the content.
             </div>
           </Panel>
           <Panel size={1}>

@@ -1,7 +1,7 @@
 {
-  "name": "react-blockpanel-demo-site",
+  "name": "react-scrollpanel-demo-site",
   "version": "1.0.0",
-  "description": "Demonstration site for react-blockpanel",
+  "description": "Demonstration site for react-scrollpanel",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
