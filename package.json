@@ -1,6 +1,6 @@
 {
   "name": "react-scrollpanel",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A lightweight, flexbox based React Components to build scrolling blocky panel-like user interfaces",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
