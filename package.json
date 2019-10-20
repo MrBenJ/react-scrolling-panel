@@ -5,6 +5,13 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Ben Junya<bjunya@gmail.com>",
+  "contributors": [
+    {
+      "name": "Grayson Null",
+      "email": "graysonnull@me.com",
+      "url": "https://github.com/GraysonNull"
+    }
+  ],
   "license": "MIT",
   "private": false,
   "scripts": {
