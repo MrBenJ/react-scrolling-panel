@@ -5,6 +5,8 @@ Many popular web applications take the full height of the window and have "tiles
 
 I created `react-scrolling-panel` to streamline the experience of making multiple independently scrolling elements that take up the full width and height of the parent, so I don't have to hunt for which one div needs `overflow: auto;` or `overflow: hidden;` anymore. The layout of the page is built semantically, composed with just 2 React Components: `<Container>` and `<Panel>`.
 
+Inspired by using awesome flexbox frameworks and teachings of [Grayson Null](https://github.com/GraysonNull).
+
 ## Quick Demo
 Insert image here
 
