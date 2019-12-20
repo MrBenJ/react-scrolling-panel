@@ -1,6 +1,5 @@
-/** @jsx jsx */
 import { ReactNode } from 'react';
-import { css, jsx } from '@emotion/core';
+import { css } from '@emotion/core';
 
 export type PanelProps = {
   size: number,
